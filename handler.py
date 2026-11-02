@@ -199,6 +199,11 @@ def action_segment(inp: dict) -> dict:
     labels = inp.get("labels") or [1] * len(points)
     if not points and not inp.get("box"):
         raise ValueError("segment needs points and/or box")
+    h, w = image.shape[:2]
+    for x, y in points:
+        if not (0 <= x < w and 0 <= y < h):
+            raise ValueError(f"point ({x}, {y}) is outside the image ({w}x{h}); "
+                             "points must be in this image's pixel coordinates")
     mask, score = predict(points, labels, inp.get("box"), inp.get("multimask", True))
 
     if inp.get("refine", True):
