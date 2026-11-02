@@ -1,0 +1,9 @@
+{
+  "input": {
+    "action": "segment",
+    "image_url": "https://REPLACE_WITH_A_PUBLIC_TEST_PHOTO.jpg",
+    "points": [[1200, 800]],
+    "labels": [1],
+    "refine": true
+  }
+}

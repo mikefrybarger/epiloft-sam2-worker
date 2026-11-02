@@ -1,0 +1,7 @@
+runpod>=1.7
+numpy<2.2
+pillow>=10
+requests>=2.31
+opencv-contrib-python-headless>=4.9
+onnx>=1.16
+git+https://github.com/facebookresearch/sam2.git
