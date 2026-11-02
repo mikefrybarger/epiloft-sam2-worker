@@ -1,5 +1,5 @@
 # Epiloft SAM 2 worker for RunPod Serverless
-FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
